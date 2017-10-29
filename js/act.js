@@ -14,6 +14,8 @@ var simulation = d3.forceSimulation()
 
 function drawEvery(error, d){
     var json = {links: [], nodes: []};
+    //leagues podria ser leida desde un archivo y no quemado dentro del codigo; en caso de que quieras incluir otras ligas 
+    //se modifica el archivo de datos y no el codigo de la funcion
     var leagues = ["Ligue 1", "Premier League", "LaLiga", "Serie A", "Liga NOS", "Premier Liga", "1.Bundesliga", "Torneo Inicial"]
     var arr = {}, teams = [], rels = {}, lm = {}, lislig = [], orgLea={};
         d.forEach(function(ds){
